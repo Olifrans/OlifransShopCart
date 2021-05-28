@@ -53,6 +53,7 @@ namespace OlifransShopCart.Web.Controllers
             return View();
         }
 
+
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -60,6 +61,7 @@ namespace OlifransShopCart.Web.Controllers
             var mappedCategoria = _mapper.Map<EditCategoriaViewModel>(categoria);
             return View(mappedCategoria);
         }
+
 
         [HttpGet]
         public IActionResult Details(int id)
