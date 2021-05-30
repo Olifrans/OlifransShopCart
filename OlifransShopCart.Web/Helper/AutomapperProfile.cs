@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using OlifransShopCart.DataAcsess.Model;
 using OlifransShopCart.Web.ViewModels.CategoriaViewModels;
+using OlifransShopCart.Web.ViewModels.ProdutoViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,18 @@ namespace OlifransShopCart.Web.Helper
             CreateMap<Categoria, DetailsCategoriaViewModel>();
             CreateMap<Categoria, DeleteCategoriaViewModel>().ReverseMap();
             CreateMap<CreateCategoriaViewModel, Categoria>();
+
+
+            CreateMap<Produto, ProdutoViewModel>();
+            CreateMap<Produto, DetailsProdutoViewModel>().
+                ForMember(dest=>dest.CategoriaNomes, opt=>opt.MapFrom(src=>src.Categorias.Select(x=>x.Categoria.Nome).ToList()));
+
+
+            CreateMap<Produto, EditProdutoViewModel>().ReverseMap();           
+            CreateMap<Produto, DeleteProdutoViewModel>().ReverseMap();
+            CreateMap<CreateProdutoViewModel, Produto>();
+
+
         }
     }
 }
