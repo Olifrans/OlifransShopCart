@@ -24,10 +24,11 @@ namespace OlifransShopCart.Web.Helper
             CreateMap<Produto, DetailsProdutoViewModel>().
                 ForMember(dest=>dest.CategoriaNomes, opt=>opt.MapFrom(src=>src.Categorias.Select(x=>x.Categoria.Nome).ToList()));
 
+            CreateMap<ProdutoPostViewModel, Produto>();
 
-            CreateMap<Produto, EditProdutoViewModel>().ReverseMap();           
-            CreateMap<Produto, DeleteProdutoViewModel>().ReverseMap();
-            CreateMap<CreateProdutoViewModel, Produto>();
+            //CreateMap<Produto, EditProdutoViewModel>().ReverseMap();           
+            //CreateMap<Produto, DeleteProdutoViewModel>().ReverseMap();
+            //CreateMap<CreateProdutoViewModel, Produto>();
 
 
         }

@@ -11,7 +11,7 @@ namespace OlifransShopCart.Service.Infraestrutura
     {
         List<Produto> GetAllProdutos();
         Produto GetProdutoById(int Id);
-        void InsertProduto(Produto produto);
+        void InsertProduto(Produto produto, List<int> categorias);
         void UpdateProduto(Produto produto);
         void DeleteProduto(Produto produto);
         void Save();

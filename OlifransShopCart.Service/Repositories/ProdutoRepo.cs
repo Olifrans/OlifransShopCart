@@ -34,10 +34,27 @@ namespace OlifransShopCart.Service.Repositories
             return _context.Produtos.Include(a => a.Categorias).ThenInclude(b => b.Categoria).Where(y => y.Id == Id).FirstOrDefault();
         }
 
-        public void InsertProduto(Produto produto)
+
+
+        //public void InsertProduto(Produto produto)
+        //{
+        //    _context.Produtos.Add(produto);
+        //}
+
+
+        public void InsertProduto(Produto produto, List<int> categorias)
         {
+            foreach (var item in categorias)
+            {
+                produto.Categorias.Add(new ProdutoCategoria()
+                {
+                    Produto=produto,
+                    CategoriaId=item
+                });
+            }
             _context.Produtos.Add(produto);
         }
+
 
         public void Save()
         {
