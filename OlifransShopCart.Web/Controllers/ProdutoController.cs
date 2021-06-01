@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using OlifransShopCart.Service.Infraestrutura;
+using OlifransShopCart.Repo.Infraestrutura;
 using OlifransShopCart.Web.ViewModels.ProdutoViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ using OlifransShopCart.DataAcsess.Model;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Hosting;
 using OlifransShopCart.Web.Helper;
+
 
 namespace OlifransShopCart.Web.Controllers
 {
@@ -59,10 +60,12 @@ namespace OlifransShopCart.Web.Controllers
         }
 
 
+
         [HttpPost]
         public IActionResult Create(CreateProdutoViewModel vm)
         {
             FileUpload fileUpload = new FileUpload(webHostEnvironment);
+            
             var selectedCategorias = vm.Categorias.Where(x => x.Selected).Select(x => x.Value).Select(int.Parse);
             string ImageFile = fileUpload.UploadFile(vm.ProdutoImage);
             var produto = new ProdutoPostViewModel
@@ -72,15 +75,14 @@ namespace OlifransShopCart.Web.Controllers
                 Descricao = vm.Descricao,
                 ProdutoImage = ImageFile
             };
+
             var mappedProduto = _mapper.Map<Produto>(produto);
-            _produto.InsertProduto(mappedProduto, selectedCategorias);
-            //_produto.InsertProduto(mappedProduto, (List<int>)selectedCategorias);
+            _produto.InsertProduto(mappedProduto, selectedCategorias); //Verifcar o erro desta linha!!! Dor de cabeça
             _produto.Save();
             return RedirectToAction("index");
         }
 
-        //visto tutp 09 posição 07:00 
-
+      
 
 
 

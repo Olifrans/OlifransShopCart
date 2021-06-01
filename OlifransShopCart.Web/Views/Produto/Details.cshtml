@@ -1,0 +1,61 @@
+﻿@model OlifransShopCart.Web.ViewModels.ProdutoViewModels.DetailsProdutoViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DetailsProdutoViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProdutoImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @*@Html.DisplayFor(model => model.ProdutoImage)*@
+            <img src="/Images/@Model.ProdutoImage" width="200" height="200" class="img-thumbnail" />
+
+        </dd>
+    </dl>
+</div>
+
+@*Francisco adção*@
+<div>
+    Categorias:
+    @foreach (var item in Model.CategoriaNomes)
+    {
+        <span>@item.Nome</span>
+    }
+</div>
+
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Voltar</a>
+</div>

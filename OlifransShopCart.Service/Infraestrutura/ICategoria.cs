@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OlifransShopCart.Service.Infraestrutura
+namespace OlifransShopCart.Repo.Infraestrutura
 {
     public interface ICategoria
     {

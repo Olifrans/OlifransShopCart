@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlifransShopCart.DataAcsess", "OlifransShopCart.DataAcsess\OlifransShopCart.DataAcsess.csproj", "{D7338A9F-C715-4289-B889-3EEA910FBE08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlifransShopCart.Service", "OlifransShopCart.Service\OlifransShopCart.Service.csproj", "{A6FD7622-6208-40EF-9F67-548F6F9B105F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlifransShopCart.Repo", "OlifransShopCart.Service\OlifransShopCart.Repo.csproj", "{A6FD7622-6208-40EF-9F67-548F6F9B105F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlifransShopCart.Web", "OlifransShopCart.Web\OlifransShopCart.Web.csproj", "{64C1C958-ACBE-4B89-A086-B7233A993764}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlifransShopCart.Web", "OlifransShopCart.Web\OlifransShopCart.Web.csproj", "{64C1C958-ACBE-4B89-A086-B7233A993764}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

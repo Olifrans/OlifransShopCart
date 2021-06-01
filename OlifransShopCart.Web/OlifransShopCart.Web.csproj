@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OlifransShopCart.DataAcsess\OlifransShopCart.DataAcsess.csproj" />
-    <ProjectReference Include="..\OlifransShopCart.Service\OlifransShopCart.Service.csproj" />
+    <ProjectReference Include="..\OlifransShopCart.Service\OlifransShopCart.Repo.csproj" />
   </ItemGroup>
 
   <ItemGroup>

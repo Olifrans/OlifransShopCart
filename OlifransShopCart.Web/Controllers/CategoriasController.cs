@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using OlifransShopCart.DataAcsess.Model;
-using OlifransShopCart.Service.Infraestrutura;
+using OlifransShopCart.Repo.Infraestrutura;
 using OlifransShopCart.Web.ViewModels.CategoriaViewModels;
 using System;
 using System.Collections.Generic;

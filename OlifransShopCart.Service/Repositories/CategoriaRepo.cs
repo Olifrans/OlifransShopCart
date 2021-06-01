@@ -1,13 +1,13 @@
 ﻿using OlifransShopCart.DataAcsess.Model;
-using OlifransShopCart.Service.Data;
-using OlifransShopCart.Service.Infraestrutura;
+using OlifransShopCart.Repo.Data;
+using OlifransShopCart.Repo.Infraestrutura;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OlifransShopCart.Service.Repositories
+namespace OlifransShopCart.Repo.Repositories
 {
     public class CategoriaRepo : ICategoria
     {

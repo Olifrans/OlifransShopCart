@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OlifransShopCart.Service.Data;
+using OlifransShopCart.Repo.Data;
 
-namespace OlifransShopCart.Service.Migrations
+namespace OlifransShopCart.Repo.Migrations
 {
     [DbContext(typeof(OlifransDbContext))]
     [Migration("20210528191107_init")]
