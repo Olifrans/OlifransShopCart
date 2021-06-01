@@ -76,6 +76,7 @@ namespace OlifransShopCart.Web.Controllers
                 ProdutoImage = ImageFile
             };
 
+
             var mappedProduto = _mapper.Map<Produto>(produto);
             _produto.InsertProduto(mappedProduto, selectedCategorias); //Verifcar o erro desta linha!!! Dor de cabeça
             _produto.Save();
